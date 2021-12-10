@@ -3,7 +3,7 @@ const path = require('path');
 const { spawn } = require('child_process');
 const { cpus } = require('os');
 
-const MAX_PARALLEL_PROCESS = /*cpus().length <= 1 ? 1 : cpus().length / 2*/ 1
+const MAX_PARALLEL_PROCESS = cpus().length <= 1 ? 1 : cpus().length / 2
 let runningProcess = []
 
     
